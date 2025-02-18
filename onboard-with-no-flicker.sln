@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "onboard-with-no-flicker", "onboard-with-no-flicker\onboard-with-no-flicker.csproj", "{B7232F88-32FC-4393-A455-B118AB620B54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7232F88-32FC-4393-A455-B118AB620B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7232F88-32FC-4393-A455-B118AB620B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7232F88-32FC-4393-A455-B118AB620B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7232F88-32FC-4393-A455-B118AB620B54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB992AB9-EF78-4DF5-ADF3-3942D2E54D00}
+	EndGlobalSection
+EndGlobal
