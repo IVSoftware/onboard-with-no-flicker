@@ -1,4 +1,6 @@
-Your question is about a flicker - briefly showing an unwanted form before opening something like a Password login. The key to suppressing this is to override `SetVisibleCore` and prevent it from setting the base class visibility to `true` until your condition has been met.
+Your post describes an onboarding flow that takes the user through two preliminary screens before finally showing the main form. The problem is that you're seeing a flicker - briefly showing an unwanted form. And since you have a password protecting the main form contents, it's a fair and reasonable assumption that sensitive information could be revealed if the main form blinks on (even for a instant) before being authorized to do so.
+
+The key to suppressing this is to override `SetVisibleCore` and prevent it from setting the base class visibility to `true` until your condition has been met.
 
 ```
 protected override void SetVisibleCore(bool value)
@@ -33,6 +35,9 @@ public partial class MainWindow : Form
     {
         base.SetVisibleCore(value && OnboardingState == OnboardingState.Authorized);
     }
+
+    // Respond to changes of the onboarding state
+    // enum by showing the corresponding window.
     OnboardingState OnboardingState
     {
         get => _onboardingState;
