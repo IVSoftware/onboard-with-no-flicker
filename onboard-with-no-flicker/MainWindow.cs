@@ -32,9 +32,9 @@ namespace onboard_with_no_flicker
                     switch (_onboardingState)
                     {
                         case OnboardingState.Screen1:
-                            using (var screen1 = new OnboardingForm1())
+                            using (var dlg = new OnboardingForm1())
                             {
-                                if (DialogResult.OK == screen1.ShowDialog(this))
+                                if (DialogResult.OK == dlg.ShowDialog(this))
                                 {
                                     OnboardingState = OnboardingState.Screen2;
                                 }
@@ -42,9 +42,9 @@ namespace onboard_with_no_flicker
                             }
                             break;
                         case OnboardingState.Screen2:
-                            using (var screen1 = new OnboardingForm2())
+                            using (var dlg = new OnboardingForm2())
                             {
-                                if (DialogResult.OK == screen1.ShowDialog(this))
+                                if (DialogResult.OK == dlg.ShowDialog(this))
                                 {
                                     OnboardingState = OnboardingState.Authorized;
                                 }
@@ -52,7 +52,7 @@ namespace onboard_with_no_flicker
                             }
                             break;
                         case OnboardingState.Authorized:
-                            SetVisibleCore(true);
+                            Show();
                             break;
                     }
                 }
