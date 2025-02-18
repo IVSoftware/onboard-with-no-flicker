@@ -15,6 +15,7 @@ namespace onboard_with_no_flicker
         public OnboardingForm2()
         {
             InitializeComponent();
+            Shown += (sender, e) => ActiveControl = null;
             textBoxUid.TextChanged += localUpdateVisibility;
             textBoxPswd.TextChanged += localUpdateVisibility;
             void localUpdateVisibility(object? sender, EventArgs e)
