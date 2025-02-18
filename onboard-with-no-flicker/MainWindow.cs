@@ -1,20 +1,21 @@
 namespace onboard_with_no_flicker
 {
-    enum OnboardingState
-    {
-        Screen1,
-        Screen2,
-        Authorized,
-    }
+    enum OnboardingState{Screen1, Screen2, Authorized, }
     public partial class MainWindow : Form
     {
         public MainWindow()
         {
             InitializeComponent();
-            buttonLogout.Click += (sender, e) =>
-            { };
+
+            // IMPORTANT: Make sure that Handle is not null.
             _ = Handle;
             BeginInvoke(() => OnboardingState = OnboardingState.Screen1);
+
+            buttonLogout.Click += (sender, e) =>
+            {
+                Hide();
+                OnboardingState = OnboardingState.Screen2;
+            };
         }
         protected override void SetVisibleCore(bool value)
         {
